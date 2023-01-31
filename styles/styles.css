@@ -56,7 +56,8 @@ body {
   color: #000000;
 }
 
-/* Форма поиска в header */
+/* header */
+
 .page-header {
   background-color: #FFE17F;
 }
@@ -67,6 +68,10 @@ body {
 }
 
 .page-header__button {
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
   text-align: center;
 }
 
@@ -100,7 +105,7 @@ body {
   color: #000000;
 }
 
-/* Слайдер */
+/* main*/
 .slider__text {
   font-family: Raleway, sans-serif;
   font-style: normal;
@@ -117,8 +122,6 @@ body {
 .slider__description-definition {
   font-size: 16px;
 }
-
-/* Категории товаров */
 
 .product-categories__link {
   text-decoration: none;
@@ -160,7 +163,6 @@ body {
   color: #000000;
 }
 
-
 .about__title {
   font-family: Raleway, sans-serif;
   font-weight: 800;
@@ -178,7 +180,6 @@ body {
   line-height: 20px;
   letter-spacing: -0.02em;
 }
-
 
 .contacts__title {
   font-family: Raleway, sans-serif;
@@ -230,6 +231,8 @@ body {
   text-transform: uppercase;
 }
 
+/* footer */
+
 .page-footer {
   color: #ffffff;
   background-color: #444444;
@@ -243,7 +246,7 @@ body {
 }
 
 .services-footer__item {
-  font-family:Raleway, sans-serif;
+  font-family: Raleway, sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
@@ -261,4 +264,126 @@ body {
   font-size: 16px;
   line-height: 20px;
   text-decoration-line: underline;
+}
+
+/* Каталог */
+
+.main-inner__title {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+/*  Хлебные крошки */
+
+.breadcrumbs {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.breadcrumbs__link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.filters__title {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.filters__sub-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.filters__item {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.sorting__title {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.sorting__select {
+  font-family: Rubik, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.product-cards__link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.product-cards__link_else-download {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.product-cards__title {
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.product-cards__price {
+  font-size: 18px;
+  line-height: 21px;
+  color: #444444;
+}
+
+.pagination {
+  background-color: #EBEBEB;
+}
+
+.pagination__link {
+  text-decoration: none;
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.pagination__link_back {
+  opacity: 0.3;
+}
+
+.pagination__link_forward {
+  color: #000000;
+}
+
+.pagination__link-numbers {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #444444;
+  opacity: 0.3;
+}
+
+.pagination__link-numbers_first{
+  opacity: 0.6;
 }
