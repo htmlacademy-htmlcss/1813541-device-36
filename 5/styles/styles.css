@@ -1,0 +1,541 @@
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Rubik, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+  background-color: #ffffff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+
+  /* outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline-offset: -5px; */
+
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* стили button-link */
+.button-link {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+/* header */
+
+.page-header {
+  background-color: #FFE17F;
+  /* width: 1160px;
+  margin: 0 auto; */
+  /* box-shadow: inset 0 40px 0 0 white; */
+}
+
+.users-menu {
+  display: flex;
+}
+
+.page-header__list {
+  list-style: none;
+  display: flex;
+
+}
+
+.page-header__input {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.page-header__button {
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+/* Пользовательское меню */
+.page-header__link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.page-header__amount-text {
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+}
+
+/* Навигация */
+.navigation {
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 800;
+}
+
+.navigation__list {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  list-style: none;
+  display: flex;
+}
+
+.navigation__link {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* main*/
+.main-container {
+  flex-grow: 1;
+}
+
+.slider__list {
+  list-style: none;
+}
+
+.slider__text {
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.slider__description-term {
+  font-size: 36px;
+  line-height: 30px;
+}
+
+.slider__description-definition {
+  font-size: 16px;
+}
+
+.product-categories__list {
+  list-style: none;
+  display: flex;
+}
+
+.product-categories__item {
+  width: 160px;
+  margin-left: 10px;
+}
+
+.product-categories__link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.product-categories__text {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+}
+
+.services__info {
+  display: flex;
+}
+
+.services__list {
+  list-style: none;
+  margin: 0;
+}
+
+.services__list-description {
+  list-style: none;
+  margin: 0;
+}
+
+.services__title {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  margin-top: 0;
+}
+
+.services__text {
+  color: #444444;
+}
+
+.individual-delivery__title {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: #F0F0F0;
+}
+
+.individual-delivery__link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.about__title {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.about__text {
+  color: #444444;
+}
+
+.about__list {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.contacts__title {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.contacts__text {
+  color: #444444;
+}
+
+.contacts__sub-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #444444;
+}
+
+.contacts__address {
+  font-style: normal;
+  color: #444444;
+}
+
+.contacts__link {
+  color: #444444;
+  text-decoration-line: underline;
+}
+
+.newsletter {
+  background-color: #F0F0F0;
+}
+
+.newsletter-title-text {
+  display: flex;
+}
+
+.newsletter__title {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.newsletter__text {
+  color: #444444;
+}
+
+.newsletter__form {
+  display: flex;
+}
+
+.newsletter__input {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  opacity: 0.5;
+}
+
+.newsletter__button {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* footer */
+
+.page-footer {
+  color: #ffffff;
+  background-color: #444444;
+}
+
+.address-footer__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.services-footer__list {
+  list-style: none;
+  display: flex;
+}
+
+.services-footer__item {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-left: 35px;
+}
+
+.services-footer__link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contacts-footer__link {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration-line: underline;
+}
+
+.social-footer__list {
+  list-style: none;
+  display: flex;
+}
+
+.htmlacademy__link {
+  color: #FFC700;
+}
+
+/* Каталог */
+
+.main-inner__title {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+/*  Хлебные крошки */
+
+.breadcrumbs {
+  font-size: 16px;
+  line-height: 20px;
+  list-style: none;
+  display: flex;
+}
+
+.breadcrumbs__link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.catalog-products {
+  background-color: #F0F0F0;
+}
+
+.catalog-wrapper {
+  display: flex;
+}
+
+.filters {
+  width: 320px;
+}
+
+.filters__title {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.filters__sub-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.filters__item {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.product-cards {
+  width: 840px;
+}
+
+.sorting {
+  background-color: #F0F0F0;
+  display: flex;
+}
+
+.sorting__title {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.sorting__select {
+  font-family: Rubik, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.sorting__button {
+  display: block;
+}
+
+.product-cards {
+  background-color: #FFFFFF;
+}
+
+.product-cards__list {
+  list-style: none;
+}
+
+.product-cards__link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.product-cards__link_else-download {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: block;
+  width: 760px;
+  margin: 0 auto;
+}
+
+.product-cards__title {
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.product-cards__price {
+  font-size: 18px;
+  line-height: 21px;
+  color: #444444;
+}
+
+.pagination {
+  width: 760px;
+  background-color: #EBEBEB;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination__link {
+  text-decoration: none;
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #444444;
+  display: block;
+}
+
+.pagination__link_back {
+  opacity: 0.3;
+}
+
+.pagination__link_forward {
+  color: #000000;
+}
+
+.pagination__list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination__link-numbers {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #444444;
+  opacity: 0.3;
+}
+
+.pagination__link-numbers_first{
+  opacity: 0.6;
+}
