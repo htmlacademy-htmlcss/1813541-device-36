@@ -22,12 +22,25 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: Rubik, sans-serif;
   font-size: 18px;
   line-height: 30px;
   color: #000000;
   background-color: #ffffff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+
+  /* outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline-offset: -5px; */
+
 }
 
 .visually-hidden {
@@ -56,13 +69,32 @@ body {
   color: #000000;
 }
 
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
 /* header */
 
 .page-header {
   background-color: #FFE17F;
+  /* width: 1160px;
+  margin: 0 auto; */
+  /* box-shadow: inset 0 40px 0 0 white; */
 }
 
-.page-header__search-form {
+.users-menu {
+  display: flex;
+}
+
+.page-header__list {
+  list-style: none;
+  display: flex;
+
+}
+
+.page-header__input {
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
 }
@@ -98,6 +130,8 @@ body {
 .navigation__list {
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  list-style: none;
+  display: flex;
 }
 
 .navigation__link {
@@ -106,6 +140,14 @@ body {
 }
 
 /* main*/
+.main-container {
+  flex-grow: 1;
+}
+
+.slider__list {
+  list-style: none;
+}
+
 .slider__text {
   font-family: Raleway, sans-serif;
   font-style: normal;
@@ -123,6 +165,16 @@ body {
   font-size: 16px;
 }
 
+.product-categories__list {
+  list-style: none;
+  display: flex;
+}
+
+.product-categories__item {
+  width: 160px;
+  margin-left: 10px;
+}
+
 .product-categories__link {
   text-decoration: none;
   color: #000000;
@@ -136,11 +188,26 @@ body {
   letter-spacing: -0.02em;
 }
 
+.services__info {
+  display: flex;
+}
+
+.services__list {
+  list-style: none;
+  margin: 0;
+}
+
+.services__list-description {
+  list-style: none;
+  margin: 0;
+}
+
 .services__title {
   font-family: Raleway, sans-serif;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
+  margin-top: 0;
 }
 
 .services__text {
@@ -209,6 +276,14 @@ body {
   text-decoration-line: underline;
 }
 
+.newsletter {
+  background-color: #F0F0F0;
+}
+
+.newsletter-title-text {
+  display: flex;
+}
+
 .newsletter__title {
   font-family: Raleway, sans-serif;
   font-weight: 800;
@@ -219,6 +294,18 @@ body {
 
 .newsletter__text {
   color: #444444;
+}
+
+.newsletter__form {
+  display: flex;
+}
+
+.newsletter__input {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  opacity: 0.5;
 }
 
 .newsletter__button {
@@ -245,6 +332,11 @@ body {
   line-height: 20px;
 }
 
+.services-footer__list {
+  list-style: none;
+  display: flex;
+}
+
 .services-footer__item {
   font-family: Raleway, sans-serif;
   font-weight: 800;
@@ -252,6 +344,7 @@ body {
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  margin-left: 35px;
 }
 
 .services-footer__link {
@@ -264,6 +357,15 @@ body {
   font-size: 16px;
   line-height: 20px;
   text-decoration-line: underline;
+}
+
+.social-footer__list {
+  list-style: none;
+  display: flex;
+}
+
+.htmlacademy__link {
+  color: #FFC700;
 }
 
 /* Каталог */
@@ -280,11 +382,25 @@ body {
 .breadcrumbs {
   font-size: 16px;
   line-height: 20px;
+  list-style: none;
+  display: flex;
 }
 
 .breadcrumbs__link {
   text-decoration: none;
   color: #000000;
+}
+
+.catalog-products {
+  background-color: #F0F0F0;
+}
+
+.catalog-wrapper {
+  display: flex;
+}
+
+.filters {
+  width: 320px;
 }
 
 .filters__title {
@@ -308,6 +424,15 @@ body {
   line-height: 20px;
 }
 
+.product-cards {
+  width: 840px;
+}
+
+.sorting {
+  background-color: #F0F0F0;
+  display: flex;
+}
+
 .sorting__title {
   font-family: Raleway, sans-serif;
   font-weight: 800;
@@ -325,6 +450,18 @@ body {
   line-height: 30px;
 }
 
+.sorting__button {
+  display: block;
+}
+
+.product-cards {
+  background-color: #FFFFFF;
+}
+
+.product-cards__list {
+  list-style: none;
+}
+
 .product-cards__link {
   text-decoration: none;
   color: #000000;
@@ -338,6 +475,9 @@ body {
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  display: block;
+  width: 760px;
+  margin: 0 auto;
 }
 
 .product-cards__title {
@@ -353,7 +493,11 @@ body {
 }
 
 .pagination {
+  width: 760px;
   background-color: #EBEBEB;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .pagination__link {
@@ -365,6 +509,7 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #444444;
+  display: block;
 }
 
 .pagination__link_back {
@@ -373,6 +518,13 @@ body {
 
 .pagination__link_forward {
   color: #000000;
+}
+
+.pagination__list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
 }
 
 .pagination__link-numbers {
