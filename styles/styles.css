@@ -75,12 +75,16 @@ body {
 /* header */
 
 .page-header {
-  background-color: #FFE17F;
+  /* background-color: #FFE17F; */
+  background: linear-gradient(to top, #FFE17F 80%, #FFFFFF 20%);
+  padding: 0 60px;
+  box-sizing: border-box;
 }
 
 .page-header__link-logo {
   display: block;
-  margin: 20px 0 30px 60px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .users-menu {
@@ -90,12 +94,13 @@ body {
 }
 
 .page-header__search-form {
-  margin-left: 60px;
+  display: flex;
 }
 
-
 .page-header__input {
+  width: 307px;
   border: 2px solid #000000;
+  border-right: none;
   border-radius: 50px 0 0 50px;
   background-color: #FFE17F;
   padding: 10px 0 10px 48px;
@@ -112,17 +117,16 @@ body {
 .page-header__list {
   list-style: none;
   display: flex;
-  margin: 0;
+  margin: 0 0 0 36px;
   padding: 0;
 }
 
 .page-header__item:not(:last-child) {
-  margin-right: 36px;
+  margin-left: 36px;
 }
 
 .page-header__item:first-child {
-  margin-left: 26px;
-  margin-right: 176px;
+  margin-left: auto;
 }
 
 .page-header__input {
@@ -157,7 +161,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   font-weight: 800;
-  margin: 0 0 0 60px;
+  margin: 0;
 }
 
 .navigation__list {
@@ -168,12 +172,12 @@ body {
   padding: 0;
 }
 
-.navigation__item {
+.navigation__item:not(:last-child) {
   margin-right: 45px;
 }
 
 .navigation__item:first-child {
-  margin-right: 276px;
+  margin-right: auto;
 }
 
 .navigation__link {
@@ -244,6 +248,9 @@ body {
 .slider__buttons {
   text-align: center;
   line-height: 1;
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
 }
 
 .slider__button-round {
@@ -267,6 +274,7 @@ body {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  column-gap: 40px;
   padding: 0;
   margin: 0;
 }
@@ -279,10 +287,21 @@ body {
 .product-categories__link {
   text-decoration: none;
   color: #000000;
-  display: block;
   margin: 0;
 }
 
+.product-categories__link::before {
+  content: "";
+  width: 160px;
+  height: 160px;
+  display: block;
+  background: #FFE17F no-repeat center;
+  margin-bottom: 33px;
+}
+
+.product-categories__link--virtual-reality::before {
+  background-image: url("../images/virtual-reality.svg");
+}
 
 .product-categories__title {
   font-family: Raleway, sans-serif;
@@ -292,6 +311,7 @@ body {
   letter-spacing: -0.02em;
   margin: 0;
 }
+
 
 .page-main__services {
   margin-bottom: 70px;
@@ -346,6 +366,11 @@ body {
   margin-bottom: 70px;
 }
 
+.individual-delivery__link {
+  text-decoration: none;
+  color: #000000;
+}
+
 .individual-delivery__title {
   font-family: Raleway, sans-serif;
   font-weight: 800;
@@ -355,14 +380,35 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   background-color: #F0F0F0;
-  padding: 39px 0;
   margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.individual-delivery__link {
-  text-decoration: none;
-  color: #000000;
+.individual-delivery__title::before {
+  content: "";
+  width: 125px;
+  height: 100px;
+  background-color: #FFE17F;
+  background-image: url("../images/deliveri-car.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
 }
+
+.individual-delivery__title::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(220, 220, 220, 0.5);
+  background-image: url("../images/delivery-i.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+}
+
 
 .about-contacts {
   display: flex;
@@ -398,9 +444,26 @@ body {
   padding: 0 0 0 0;
 }
 
-.about__item:not(:last-child) {
-  margin: 0 0 19px 0;
+.about__item {
+  margin-bottom: 19px;
+  display: flex;
+  align-items: center;
 }
+
+.about__item:last-child {
+  margin: 0;
+}
+
+.about__item::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FFC700;
+  margin-right: 26px;
+}
+
 
 .page-main__contacts {
   margin: 0;
@@ -492,6 +555,7 @@ body {
   font-size: 18px;
   line-height: 30px;
   color: #444444;
+  background-color: #F0F0F0;
   opacity: 0.5;
   width: 557px;
   padding: 11px 0 14px 16px;
