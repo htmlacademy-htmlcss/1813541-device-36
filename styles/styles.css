@@ -619,6 +619,27 @@ body {
 	background-color: #444444;
 }
 
+.footer-wrapper {
+  display: grid;
+  justify-content: space-between;
+  grid-template-areas:
+    "page-footer__link page-footer__link page-footer__link"
+    "address-footer services-footer contacts-footer"
+    "social-footer social-footer htmlacademy";
+  grid-template-columns: 240px 444px 175px;
+}
+
+.page-footer__link {
+  display: block;
+  padding-top: 62px;
+  margin-bottom: 35px;
+  grid-area: page-footer__link;
+}
+
+.address-footer {
+  grid-area: address-footer;
+}
+
 .address-footer__text {
 	font-style: normal;
 	font-weight: 400;
@@ -626,9 +647,17 @@ body {
 	line-height: 20px;
 }
 
+.services-footer {
+  grid-area: services-footer;
+  align-self: center;
+}
+
 .services-footer__list {
 	list-style: none;
 	display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 .services-footer__item {
@@ -638,7 +667,6 @@ body {
 	line-height: 21px;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
-	margin-left: 35px;
 }
 
 .services-footer__link {
@@ -646,16 +674,28 @@ body {
 	text-decoration: none;
 }
 
+.contacts-footer {
+  grid-area: contacts-footer;
+  align-self: center;
+}
+
 .contacts-footer__link {
 	color: #ffffff;
 	font-size: 16px;
 	line-height: 20px;
 	text-decoration-line: underline;
+  display: block;
+}
+
+.social-footer {
+  grid-area: social-footer;
 }
 
 .social-footer__list {
 	list-style: none;
 	display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .htmlacademy__link {
