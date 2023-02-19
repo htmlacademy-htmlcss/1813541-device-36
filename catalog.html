@@ -26,7 +26,7 @@
               <span class="page-header__text">Коля Петухов</span>
             </a>
           </li>
-          <li class="users-menu__item users-menu__item_color-grey">
+          <li class="users-menu__item users-menu__item--color-grey">
             <a href="#" class="page-header__link">
               <span class="page-header__text">Выйти</span>
               <span class="visually-hidden">из личного кабинета</span>
@@ -132,10 +132,10 @@
                 <option value="visually-hidden">Сначала дорогие</option>
                 <option value="visually-hidden">Сначала дешевые</option>
               </select>
-              <a href="#" class="sorting__button sorting__button_up">
+              <a href="#" class="sorting__button sorting__button--up">
                 <span class="visually-hidden">Сортировка по возрастанию</span>
               </a>
-              <a href="#" class="sorting__button sorting__button_down">
+              <a href="#" class="sorting__button sorting__button--down">
                 <span class="visually-hidden">Сортировка по убыванию</span>
               </a>
             </div>
@@ -143,16 +143,20 @@
               <li class="product-cards__item">
                 <a href="#" class="product-cards__link">
                   <img src="images/catalog/amateurselfie-stick.jpg" alt="Любительская селфи-палка" class="product-cards__image" width="360" height="380">
-                  <h3 class="product-cards__title">Любительская селфи-палка</h3>
-                  <p class="product-cards__price">500&nbsp;₽</p>
+                  <div class="product-cards__sign">
+                    <h3 class="product-cards__title">Любительская селфи-палка</h3>
+                    <p class="product-cards__price">500&nbsp;₽</p>
+                  </div>
                 </a>
-                <a href="#" class="button-link">Подробнее</a>
+                <a href="#" class="button-link button-link--">Подробнее</a>
               </li>
               <li class="product-cards__item">
                 <a href="#" class="product-cards__link">
                   <img src="images/catalog/professional-selfie-stick.jpg" alt="Профессиональная селфи-палка " class="product-cards__image" width="360" height="380">
-                  <h3 class="product-cards__title">Профессиональная селфи-палка </h3>
-                  <p class="product-cards__price">1&nbsp;500&nbsp;₽</p>
+                  <div class="product-cards__sign">
+                    <h3 class="product-cards__title">Профессиональная селфи-палка </h3>
+                    <p class="product-cards__price">1&nbsp;500&nbsp;₽</p>
+                  </div>
                 </a>
                 <a href="#" class="button-link">Подробнее</a>
                 <p class="visually-hidden">New</p>
@@ -160,26 +164,30 @@
               <li class="product-cards__item">
                 <a href="#" class="product-cards__link">
                   <img src="images/catalog/unsinkable-selfie-stick.jpg" alt="Непотопляемая селфи-палка" class="product-cards__image" width="360" height="380">
-                  <h3 class="product-cards__title">Непотопляемая селфи-палка</h3>
-                  <p class="product-cards__price">2&nbsp;500&nbsp;₽</p>
+                  <div class="product-cards__sign">
+                    <h3 class="product-cards__title">Непотопляемая селфи-палка</h3>
+                    <p class="product-cards__price">2&nbsp;500&nbsp;₽</p>
+                  </div>
                 </a>
                 <a href="#" class="button-link">Подробнее</a>
               </li>
               <li class="product-cards__item">
                 <a href="#" class="product-cards__link">
                   <img src="images/catalog/selfie-stick-follow-me.jpg" alt="Селфи-палка «Следуй за мной»" class="product-cards__image" width="360" height="380">
-                  <h3 class="product-cards__title">Селфи-палка «Следуй за мной»</h3>
-                  <p class="product-cards__price">1&nbsp;500&nbsp;₽</p>
+                  <div class="product-cards__sign">
+                    <h3 class="product-cards__title">Селфи-палка «Следуй за мной»</h3>
+                    <p class="product-cards__price">1&nbsp;500&nbsp;₽</p>
+                  </div>
                 </a>
                 <a href="#" class="button-link">Подробнее</a>
               </li>
             </ul>
-            <a href="#" class="product-cards__link product-cards__link_else-download">Загрузить ещё</a>
+            <a href="#" class="product-cards__link product-cards__link--else-download">Загрузить ещё</a>
             <div class="product-cards__pagination pagination">
-              <a href="#" class="pagination__link pagination__link_back">Назад</a>
+              <a href="#" class="pagination__link pagination__link--back">Назад</a>
               <ul class="pagination__list">
                 <li class="pagination__item">
-                  <a href="#" class="pagination__link-numbers pagination__link-numbers_first">1</a>
+                  <a href="#" class="pagination__link-numbers pagination__link-numbers--first">1</a>
                 </li>
                 <li class="pagination__item">
                   <a href="#" class="pagination__link-numbers">2</a>
@@ -194,14 +202,14 @@
                   <a href="#" class="pagination__link-numbers">15</a>
                 </li>
               </ul>
-              <a href="#" class="pagination__link pagination__link_forward">Вперёд</a>
+              <a href="#" class="pagination__link pagination__link--forward">Вперёд</a>
             </div>
           </div>
         </div>
       </section>
     </main>
     <footer class="page-footer">
-      <div class="container">
+      <div class="container footer-wrapper">
         <a href="index.html" class="page-footer__link">
           <img class="page-footer__logo" src="images/logo/logo-footer.svg" alt="Логотип device" width="145" height="36">
         </a>
@@ -232,7 +240,7 @@
         <section class="page-footer__social social-footer">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="social-footer__list">
-            <li class="social-footer__item">
+            <li class="social-footer__item social-footer__item--telegram">
               <a href="https://t.me/htmlacademy" class="social-footer__link">
                 <span class="visually-hidden">Telegram</span>
               </a>
