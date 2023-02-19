@@ -22,12 +22,17 @@
 	font-display: swap;
 }
 
+:root {
+  --main-font: Rubik, sans-serif;
+  --additional-font: Raleway, sans-serif;
+}
+
 html {
 	height: 100%;
 }
 
 body {
-	font-family: Rubik, sans-serif;
+	font-family: var(--main-font);
 	font-size: 18px;
 	line-height: 30px;
 	color: #000000;
@@ -56,7 +61,7 @@ body {
 
 /* стили button-link */
 .button-link {
-	font-family: Raleway, sans-serif;
+	font-family: var(--additional-font);
 	font-weight: 800;
 	font-size: 18px;
 	line-height: 21px;
@@ -75,7 +80,6 @@ body {
 /* header */
 
 .page-header {
-	/* background-color: #FFE17F; */
 	background: linear-gradient(to top, #FFE17F 80%, #FFFFFF 20%);
 	padding: 0 60px;
 	box-sizing: border-box;
@@ -137,7 +141,7 @@ body {
 }
 
 .page-header__button {
-	font-family: Rubik, sans-serif;
+	font-family: var(--main-font);
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 20px;
@@ -158,7 +162,7 @@ body {
 
 /* Навигация */
 .navigation {
-	font-family: Raleway, sans-serif;
+	font-family: var(--additional-font);
 	font-size: 18px;
 	line-height: 21px;
 	font-weight: 800;
@@ -222,7 +226,7 @@ body {
 }
 
 .slider__text {
-	font-family: Raleway, sans-serif;
+	font-family: var(--additional-font);
 	font-style: normal;
 	font-weight: 800;
 	font-size: 50px;
@@ -335,7 +339,7 @@ body {
 }
 
 .product-categories__title {
-	font-family: Raleway, sans-serif;
+	font-family: var(--additional-font);
 	font-weight: 800;
 	font-size: 18px;
 	line-height: 24px;
@@ -383,7 +387,7 @@ body {
 }
 
 .services__title {
-	font-family: Raleway, sans-serif;
+	font-family: var(--additional-font);
 	font-weight: 800;
 	font-size: 50px;
 	line-height: 50px;
@@ -404,7 +408,7 @@ body {
 }
 
 .individual-delivery__title {
-	font-family: Raleway, sans-serif;
+	font-family: var(--additional-font);
 	font-weight: 800;
 	font-size: 20px;
 	line-height: 22px;
@@ -506,7 +510,7 @@ body {
 }
 
 .contacts__title {
-	font-family: Raleway, sans-serif;
+	font-family: var(--additional-font);
 	font-weight: 800;
 	font-size: 50px;
 	line-height: 50px;
@@ -559,7 +563,7 @@ body {
 }
 
 .newsletter__title {
-	font-family: Raleway, sans-serif;
+	font-family: var(--additional-font);
 	font-weight: 800;
 	font-size: 50px;
 	line-height: 50px;
@@ -583,7 +587,7 @@ body {
 }
 
 .newsletter__input {
-	font-family: Rubik, sans-serif;
+	font-family: var(--main-font);
 	font-size: 18px;
 	line-height: 30px;
 	color: #444444;
@@ -594,7 +598,7 @@ body {
 }
 
 .newsletter__button {
-	font-family: Raleway, sans-serif;
+	font-family: var(--additional-font);
 	font-weight: 800;
 	font-size: 18px;
 	line-height: 21px;
@@ -661,7 +665,7 @@ body {
 }
 
 .services-footer__item {
-	font-family: Raleway, sans-serif;
+	font-family: var(--additional-font);
 	font-weight: 800;
 	font-size: 18px;
 	line-height: 21px;
@@ -705,7 +709,7 @@ body {
 /* Каталог */
 
 .main-inner__title {
-	font-family: Raleway, sans-serif;
+	font-family: var(--additional-font);
 	font-weight: 800;
 	font-size: 50px;
 	line-height: 50px;
@@ -750,7 +754,7 @@ body {
 }
 
 .filters__title {
-	font-family: Raleway, sans-serif;
+	font-family: var(--additional-font);
 	font-weight: 800;
 	font-size: 16px;
 	line-height: 19px;
@@ -781,10 +785,10 @@ body {
 }
 
 .sorting__title {
-	font-family: Raleway, sans-serif;
+	font-family: var(--additional-font);
 	font-weight: 800;
 	font-size: 16px;
-	line-height: 18px;
+	line-height: 20px;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	margin: 0;
@@ -793,7 +797,7 @@ body {
 }
 
 .sorting__select {
-	font-family: Rubik, sans-serif;
+	font-family: var(--main-font);
 	font-style: normal;
 	font-weight: 400;
 	font-size: 18px;
@@ -812,6 +816,11 @@ body {
 
 .product-cards__list {
 	list-style: none;
+  margin: 70px 40px 44px 40px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  gap: 40px;
 }
 
 .product-cards__link {
@@ -819,8 +828,8 @@ body {
 	color: #000000;
 }
 
-.product-cards__link_else-download {
-	font-family: Raleway, sans-serif;
+.product-cards__link--else-download {
+	font-family: var(--additional-font);
 	font-weight: 800;
 	font-size: 16px;
 	line-height: 19px;
@@ -835,10 +844,16 @@ body {
 	margin-bottom: 44px;
 }
 
+.product-cards__sign {
+  display: flex;
+  justify-content: space-between;
+}
+
 .product-cards__title {
 	font-size: 18px;
 	line-height: 20px;
 	letter-spacing: -0.02em;
+  width: 200px;
 }
 
 .product-cards__price {
@@ -859,7 +874,7 @@ body {
 
 .pagination__link {
 	text-decoration: none;
-	font-family: Raleway, sans-serif;
+	font-family: var(--additional-font);
 	font-weight: 800;
 	font-size: 18px;
 	line-height: 21px;
@@ -870,11 +885,11 @@ body {
 	padding: 25px;
 }
 
-.pagination__link_back {
+.pagination__link--back {
 	opacity: 0.3;
 }
 
-.pagination__link_forward {
+.pagination__link--forward {
 	color: #000000;
 }
 
@@ -899,6 +914,6 @@ body {
 	box-sizing: border-box;
 }
 
-.pagination__link-numbers_first{
+.pagination__link-numbers--first{
 	opacity: 0.6;
 }
