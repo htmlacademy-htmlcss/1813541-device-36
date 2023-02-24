@@ -21,19 +21,19 @@
         </form>
         <ul class="page-header__list">
           <li class="page-header__item">
-            <a href="#" class="page-header__link">
+            <a href="#" class="page-header__link page-header__link--enter">
               <span class="page-header__text">Войти</span>
               <span class="visually-hidden">в личный кабинет</span>
             </a>
           </li>
           <li class="page-header__item">
-            <a href="#" class="page-header__link">
+            <a href="#" class="page-header__link page-header__link--compare">
               <span class="page-header__text">Сравнить</span>
               <span class="visually-hidden">товары</span>
             </a>
           </li>
           <li class="page-header__item">
-            <a href="#" class="page-header__link">
+            <a href="#" class="page-header__link page-header__link--basket">
               <span class="page-header__text">Корзина</span>
               <span class="visually-hidden">Добавлено товаров:</span>
               <span class="page-header__amount-text">2</span>
@@ -44,7 +44,7 @@
       <nav class="page-header__navigation navigation">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="catalog.html" class="navigation__link">Каталог товаров</a>
+            <a href="catalog.html" class="navigation__link navigation__link--plus">Каталог товаров</a>
           </li>
           <li class="navigation__item">
             <a href="#" class="navigation__link">Доставка</a>
@@ -61,10 +61,10 @@
     <main class="page-main main-container">
       <section class="page-main__slider slider container">
         <h2 class="visually-hidden">Промо с товарами</h2>
-        <button class="slider__button">
+        <button class="slider__button slider__button--prev">
           <span class="visually-hidden">Назад</span>
         </button>
-        <button class="slider__button">
+        <button class="slider__button slider__button--next">
           <span class="visually-hidden">Вперед</span>
         </button>
         <ul class="slider__list">
@@ -175,7 +175,7 @@
           <h2 class="visually-hidden">Сервис</h2>
           <div class="services__info">
             <ul class="services__list">
-              <li class="services__item">
+              <li class="services__item services__item--active">
                 <a href="#" class="button-link button-link--selected">Доставка</a>
               </li>
               <li class="services__item">
