@@ -70,8 +70,19 @@ body {
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #000000;
-  display: inline-block;
   padding: 10px 5px;
+  position: relative;
+}
+
+.button-link--stripe::before {
+  content: "";
+  width: 100%;
+  height: 8px;
+  background-color: #FFE17F;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }
 
 .container {
@@ -142,8 +153,8 @@ body {
 }
 
 .page-header__input:focus-visible {
-  border: 2px solid #AF4FFF;
-  outline: none;
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .page-header__button {
@@ -209,8 +220,8 @@ body {
 }
 
 .page-header__link:focus-visible {
-  outline: none;
-  border: 2px solid #AF4FFF;
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .page-header__link::before {
@@ -290,16 +301,16 @@ body {
 }
 
 .navigation__link:hover {
-  opacity: 0.6;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .navigation__link:active {
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .navigation__link:focus-visible {
-  border: 2px solid #AF4FFF;
-  outline: none;
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .navigation__link--plus {
@@ -308,7 +319,11 @@ body {
 }
 
 .navigation__link--plus:hover {
-  opacity: 1;
+  color: rgba(0, 0, 0, 1);
+}
+
+.navigation__link--plus:active {
+  color: rgba(0, 0, 0, 1);
 }
 
 .navigation__link--plus::after {
@@ -322,6 +337,14 @@ body {
   border: 2px solid #000000;
   border-radius: 50%;
   margin-left: 30px;
+}
+
+.navigation__link--plus:hover::after {
+  opacity: 1;
+}
+
+.navigation__link--plus:active::after {
+  opacity: 1;
 }
 
 /* main*/
@@ -392,6 +415,11 @@ body {
 
 .slider__sub-text {
 	margin: 0 0 50px 0;
+}
+
+.slider__button-link {
+  display: block;
+  width: 220px;
 }
 
 .slider__description-list {
@@ -534,6 +562,11 @@ body {
 
 .services__item--active {
   background-color: #000000;
+}
+
+.services__button-link {
+  display: block;
+  width: 160px;
 }
 
 .button-link--selected {
@@ -688,6 +721,10 @@ body {
 	margin-right: 26px;
 }
 
+.about__button-link {
+  display: block;
+  width: 270px;
+}
 
 .page-main__contacts {
 	margin: 0;
@@ -748,6 +785,11 @@ body {
 	list-style: none;
 	padding: 0;
 	margin: 0 0 40px 0;
+}
+
+.contacts__button-link {
+  display: block;
+  width: 260px;
 }
 
 .newsletter {
