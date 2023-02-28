@@ -481,13 +481,24 @@ body {
 }
 
 .slider__button-round {
-	width: 12px;
-	height: 12px;
-	border: 2px solid #000000;
-	border-radius: 50%;
-	cursor: pointer;
-	padding: 0;
-	margin: 0;
+  width: 12px;
+  height: 12px;
+  border: none;
+  background-color: #FFFFFF;
+  padding: 0;
+  margin: 0;
+}
+
+.slider__button-round::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  display: block;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
 }
 
 .slider__button-round:hover {
@@ -504,7 +515,7 @@ body {
 }
 
 .slider__button-round--active {
-	background-color: #000000;
+	/* background-color: #000000; */
 }
 
 .page-main__product-categories {
