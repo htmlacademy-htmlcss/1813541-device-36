@@ -652,6 +652,18 @@ body {
 .services__item-description {
 	display: none;
 	width: 479px;
+  position: relative;
+}
+
+.services__item-description::after {
+	content: "";
+  width: 136px;
+  height: 164px;
+  background-image: url("../images/delivery.svg");
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
 
 .services__item-description--active {
