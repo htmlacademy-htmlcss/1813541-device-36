@@ -21,19 +21,19 @@
         </form>
         <ul class="page-header__list">
           <li class="page-header__item">
-            <a href="#" class="page-header__link">
+            <a href="#" class="page-header__link page-header__link--enter">
               <span class="page-header__text">Войти</span>
               <span class="visually-hidden">в личный кабинет</span>
             </a>
           </li>
           <li class="page-header__item">
-            <a href="#" class="page-header__link">
+            <a href="#" class="page-header__link page-header__link--compare">
               <span class="page-header__text">Сравнить</span>
               <span class="visually-hidden">товары</span>
             </a>
           </li>
           <li class="page-header__item">
-            <a href="#" class="page-header__link">
+            <a href="#" class="page-header__link page-header__link--basket">
               <span class="page-header__text">Корзина</span>
               <span class="visually-hidden">Добавлено товаров:</span>
               <span class="page-header__amount-text">2</span>
@@ -44,7 +44,7 @@
       <nav class="page-header__navigation navigation">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="catalog.html" class="navigation__link">Каталог товаров</a>
+            <a href="catalog.html" class="navigation__link navigation__link--plus">Каталог товаров</a>
           </li>
           <li class="navigation__item">
             <a href="#" class="navigation__link">Доставка</a>
@@ -61,19 +61,19 @@
     <main class="page-main main-container">
       <section class="page-main__slider slider container">
         <h2 class="visually-hidden">Промо с товарами</h2>
-        <button class="slider__button">
+        <button class="slider__button slider__button--prev">
           <span class="visually-hidden">Назад</span>
         </button>
-        <button class="slider__button">
+        <button class="slider__button slider__button--next">
           <span class="visually-hidden">Вперед</span>
         </button>
         <ul class="slider__list">
           <li class="slider__item slider__item--active">
-            <img class="slider__image" src="images/slider/slider-1-drone.png" alt="Квадракоптер с лазером" width="560" height="560">
+            <img class="slider__image" src="images/slider/slider-1-drone.png" alt="Квадракоптер с лазером" width="560" height="502">
             <div class="text-description">
               <p class="slider__text">Порхает как бабочка, жалит как пчела!</p>
               <p class="slider__sub-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-              <a href="#" class="button-link">Подробнее</a>
+              <a href="#" class="slider__button-link button-link button-link--stripe">Подробнее</a>
               <dl class="slider__description-list">
                 <div class="definition-term">
                   <dt class="slider__description-term">800 м</dt>
@@ -87,11 +87,11 @@
             </div>
           </li>
           <li class="slider__item">
-            <img class="slider__image" src="images/slider/slider-2-fitness.png" alt="Фитнес-браслет" width="560" height="560">
+            <img class="slider__image" src="images/slider/slider-2-fitness.png" alt="Фитнес-браслет" width="560" height="502">
             <div class="text-description">
               <p class="slider__text">Худеем правильно!</p>
               <p class="slider__sub-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-              <a href="#" class="button-link">Подробнее</a>
+              <a href="#" class="slider__button-link button-link button-link--stripe">Подробнее</a>
               <dl class="slider__description-list">
                 <div class="definition-term">
                   <dt class="slider__description-term">48 часов</dt>
@@ -101,11 +101,11 @@
             </div>
           </li>
           <li class="slider__item">
-            <img class="slider__image" src="images/slider/slider-3-selfie-stick.png" alt="Палка для селфи" width="560" height="560">
+            <img class="slider__image" src="images/slider/slider-3-selfie-stick.png" alt="Палка для селфи" width="560" height="502">
             <div class="text-description">
               <p class="slider__text">Делай селфи, как Бен Стиллер! </p>
               <p class="slider__sub-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
-              <a href="#" class="button-link">Подробнее</a>
+              <a href="#" class="slider__button-link button-link button-link--stripe">Подробнее</a>
               <dl class="slider__description-list">
                 <div class="definition-term">
                   <dt class="slider__description-term">8,5 м</dt>
@@ -145,7 +145,7 @@
           </li>
           <li class="product-categories__item product-categories__item--monopods">
             <a href="catalog.html" class="product-categories__link">
-              <h3 class="product-categories__title">Моноподы для селфи</h3>
+              <h3 class="product-categories__title">Моноподы для&nbsp;селфи</h3>
             </a>
           </li>
           <li class="product-categories__item product-categories__item--action-cameras">
@@ -171,40 +171,50 @@
         </ul>
       </section>
       <section class="page-main__services services">
-        <div class="container">
+        <div class="container services__info">
           <h2 class="visually-hidden">Сервис</h2>
-          <div class="services__info">
-            <ul class="services__list">
-              <li class="services__item">
-                <a href="#" class="button-link button-link--selected">Доставка</a>
-              </li>
-              <li class="services__item">
-                <a href="#" class="button-link">Гарантия</a>
-              </li>
-              <li class="services__item">
-                <a href="#" class="button-link">Кредит</a>
-              </li>
-            </ul>
-            <ul class="services__list-description">
-              <li class="services__item-description services__item-description--active">
-                <h3 class="services__title">Доставка</h3>
-                <p class="services__text">Мы с удовольствием доставим ваш товар прямок вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-              </li>
-              <li class="services__item-description">
-                <h3 class="services__title">Гарантия</h3>
-                <p class="services__text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-              </li>
-              <li class="services__item-description">
-                <h3 class="services__title">Кредит</h3>
-                <p class="services__text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
-              </li>
-            </ul>
-          </div>
+          <ul class="services__list">
+            <li class="services__item services__item--active">
+              <a href="#" class="services__button-link button-link button-link--selected">Доставка</a>
+            </li>
+            <li class="services__item">
+              <a href="#" class="services__button-link button-link button-link--stripe">Гарантия</a>
+            </li>
+            <li class="services__item">
+              <a href="#" class="services__button-link button-link button-link--stripe">Кредит</a>
+            </li>
+          </ul>
+          <ul class="services__list-description">
+            <li class="services__item-description services__item-description--delivery services__item-description--active">
+              <h3 class="services__title">Доставка</h3>
+              <p class="services__text">Мы с удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду совершенно бесплатно! Ведь мы&nbsp;неплохо заработаем, поднимая его на ваш этаж.</p>
+            </li>
+            <li class="services__item-description services__item-description--assurance">
+              <h3 class="services__title">Гарантия</h3>
+              <p class="services__text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+            </li>
+            <li class="services__item-description services__item-description--credit">
+              <h3 class="services__title">Кредит</h3>
+              <p class="services__text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="page-main__individual-delivery individual-delivery container">
         <a href="" class="individual-delivery__link">
           <h2 class="individual-delivery__title">Доставим редкий товар под заказ</h2>
+          <svg width="41" height="40" viewBox="0 0 41 40" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20.5" cy="20" r="20" fill="#DCDCDC" fill-opacity="0.5" />
+            <g>
+              <path d="M21 14H19V16H21V14Z" />
+              <path d="M21 18H19V26H21V18Z" />
+            </g>
+            <defs>
+              <clipPath id="clip0_37604_28">
+                <rect width="2" height="12" transform="translate(19 14)" />
+              </clipPath>
+            </defs>
+          </svg>
         </a>
       </section>
       <div class="about-contacts container">
@@ -217,7 +227,7 @@
             <li class="about__item">СДИК</li>
             <li class="about__item">ТоксБерри</li>
           </ul>
-          <a href="#" class="button-link">Подробнее о нас</a>
+          <a href="#" class="about__button-link button-link button-link--stripe">Подробнее о нас</a>
         </section>
         <section class="page-main__contacts contacts container">
           <h2 class="contacts__title">Контакты</h2>
@@ -232,7 +242,7 @@
             <li class="contacts__item-schedule">пн—пт: с 10:00 до 22:00</li>
             <li class="contacts__item-schedule">сб—вс: с 10:00 до 19:00</li>
           </ul>
-          <a href="#" class="button-link">Напишите нам</a>
+          <a href="#" class="contacts__button-link button-link button-link--stripe">Напишите нам</a>
         </section>
       </div>
       <section class="page-main__newsletter newsletter">
@@ -271,7 +281,7 @@
               <a href="#" class="services-footer__link">Гарантия</a>
             </li>
             <li class="services-footer__item">
-              <a href="#" class="services-footer__link">Кредит</a>
+              <a href="#" class="services-footer__link">Контакты</a>
             </li>
           </ul>
         </section>
@@ -282,18 +292,18 @@
         <section class="page-footer__social social-footer">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="social-footer__list">
-            <li class="social-footer__item social-footer__item--telegram">
-              <a href="https://t.me/htmlacademy" class="social-footer__link">
+            <li class="social-footer__item">
+              <a href="https://t.me/htmlacademy" class="social-footer__link social-footer__link--telegram">
                 <span class="visually-hidden">Telegram</span>
               </a>
             </li>
             <li class="social-footer__item">
-              <a href="https://www.youtube.com/user/htmlacademyru" class="social-footer__link">
+              <a href="https://www.youtube.com/user/htmlacademyru" class="social-footer__link social-footer__link--youtube">
                 <span class="visually-hidden">Youtube</span>
               </a>
             </li>
             <li class="social-footer__item">
-              <a href="https://twitter.com/htmlacademy_ru" class="social-footer__link">
+              <a href="https://twitter.com/htmlacademy_ru" class="social-footer__link social-footer__link--twitter">
                 <span class="visually-hidden">Twitter</span>
               </a>
             </li>
