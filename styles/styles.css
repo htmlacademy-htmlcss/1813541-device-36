@@ -1293,6 +1293,7 @@ background-color: #FFC700;
 
 .filters {
 	width: 320px;
+  padding: 0 60px;
 }
 
 .filters__title {
@@ -1310,6 +1311,61 @@ background-color: #FFC700;
 	line-height: 20px;
 	letter-spacing: -0.02em;
 }
+
+/* Range bar */
+
+.range__scale {
+  position: relative;
+  height: 2px;
+  background-color: #DCDCDC;
+  margin-bottom: 11px;
+}
+
+.range__bar {
+  position: absolute;
+  height: 2px;
+  background-color: #000000;
+}
+
+.range__toggle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Почему не меняется при наведении цвет border... */
+
+.range__toggle:hover {
+  border: 2px solid rgba(0, 0, 0, 0.6);
+}
+
+.range__toggle:active {
+  background-color: #000000;
+}
+
+.range__toggle:focus-visible {
+  background-color: #000000;
+}
+
+.range__toggle--min {
+  top: 50%;
+  transform: translateY(-50%);
+  left: -9px;
+}
+
+.range__toggle--max {
+  top: 50%;
+  transform: translateY(-50%);
+  right: -9px;
+}
+
+
+/* __________________________________________________ */
 
 .filters__item {
 	font-size: 16px;
