@@ -1292,7 +1292,7 @@ background-color: #FFC700;
 }
 
 .filters {
-	width: 320px;
+  width: 320px;
   padding: 0 60px;
 }
 
@@ -1303,6 +1303,9 @@ background-color: #FFC700;
 	line-height: 19px;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 25px 0;
 }
 
 .filters__sub-title {
@@ -1310,6 +1313,23 @@ background-color: #FFC700;
 	font-size: 18px;
 	line-height: 20px;
 	letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+/* .filters__sub-title::before {
+  content: "";
+  width: 200px;
+  height: 2px;
+  background-color: #000000;
+  display: block;
+  margin-bottom: 12px;
+} */
+
+.filters__group {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 35px;
+  border: none;
 }
 
 /* Range bar */
@@ -1331,17 +1351,15 @@ background-color: #FFC700;
   position: absolute;
   width: 18px;
   height: 18px;
-  background-color: transparent;
+  background-color: #EBEBEB;
   border: 2px solid #000000;
   border-radius: 50%;
   cursor: pointer;
   box-sizing: border-box;
 }
 
-/* Почему не меняется при наведении цвет border... */
-
 .range__toggle:hover {
-  border: 2px solid rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .range__toggle:active {
@@ -1364,18 +1382,93 @@ background-color: #FFC700;
   right: -9px;
 }
 
-
-/* __________________________________________________ */
-
-.filters__item {
-	font-size: 16px;
-	line-height: 20px;
+.range__wrapper-inputs {
+  display: flex;
+  justify-content: space-between;
 }
 
+.range__label {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  margin-left: -12px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.range__input {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: start;
+  color: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  padding: 0 2px;
+  display: inline-block;
+  appearance: textfield;
+}
+
+.range__input::-webkit-outer-spin-button,
+.range__input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.filters__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filters__item:not(:last-child) {
+  margin-bottom: 17px;
+}
+
+/* ! ЧТО ДЕЛАТЬ С ЭТОЙ КНОПКОЙ? как сделать так, чтобы на нее не действовал padding?  */
 .filters__button-link {
   border: none;
-  width: 220px;
+  width: 200px;
   cursor: pointer;
+}
+
+.filters__label {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.filters__control-mark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000000;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.filters__input[type="checkbox"]:checked + .filters__control-mark::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: url("../images/checkmark.svg") center / 10px 10px no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.filters__control-label {
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .product-cards {
