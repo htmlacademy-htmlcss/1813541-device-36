@@ -1293,7 +1293,8 @@ background-color: #FFC700;
 
 .filters {
   width: 320px;
-  padding: 0 60px;
+  padding: 0;
+  margin: 0;
 }
 
 .filters__title {
@@ -1305,7 +1306,7 @@ background-color: #FFC700;
 	text-transform: uppercase;
   margin: 0;
   margin-bottom: 35px;
-  padding: 25px 0;
+  padding: 25px 60px;
 }
 
 .filters__sub-title {
@@ -1313,20 +1314,21 @@ background-color: #FFC700;
 	font-size: 18px;
 	line-height: 20px;
 	letter-spacing: -0.02em;
+  padding: 0;
   margin-bottom: 20px;
 }
 
-/* .filters__sub-title::before {
+.filters__sub-title::before {
   content: "";
   width: 200px;
   height: 2px;
   background-color: #000000;
   display: block;
   margin-bottom: 12px;
-} */
+}
 
 .filters__group {
-  padding: 0;
+  padding: 0 60px;
   margin: 0;
   margin-bottom: 35px;
   border: none;
@@ -1352,22 +1354,35 @@ background-color: #FFC700;
   width: 18px;
   height: 18px;
   background-color: #EBEBEB;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.range__toggle::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  display: block;
   border: 2px solid #000000;
   border-radius: 50%;
-  cursor: pointer;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
 }
 
-.range__toggle:hover {
-  border: 2px solid rgba(0, 0, 0, 0.3);
+.range__toggle:hover::before {
+  border: 2px solid rgba(0, 0, 0, 0.5);
 }
 
-.range__toggle:active {
+.range__toggle:active::before {
   background-color: #000000;
 }
 
 .range__toggle:focus-visible {
-  background-color: #000000;
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .range__toggle--min {
@@ -1384,7 +1399,6 @@ background-color: #FFC700;
 
 .range__wrapper-inputs {
   display: flex;
-  justify-content: space-between;
 }
 
 .range__label {
@@ -1398,6 +1412,11 @@ background-color: #FFC700;
   color: rgba(0, 0, 0, 0.3);
 }
 
+.range__label:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
 .range__input {
   font-family: 'Rubik';
   font-style: normal;
@@ -1408,9 +1427,9 @@ background-color: #FFC700;
   color: rgba(0, 0, 0, 0.3);
   background-color: transparent;
   border: none;
+  display: inline-block;
   width: 100%;
   padding: 0 2px;
-  display: inline-block;
   appearance: textfield;
 }
 
@@ -1430,10 +1449,10 @@ background-color: #FFC700;
   margin-bottom: 17px;
 }
 
-/* ! ЧТО ДЕЛАТЬ С ЭТОЙ КНОПКОЙ? как сделать так, чтобы на нее не действовал padding?  */
 .filters__button-link {
   border: none;
-  width: 200px;
+  width: 220px;
+  margin-left: 60px;
   cursor: pointer;
 }
 
@@ -1450,16 +1469,20 @@ background-color: #FFC700;
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  border: 2px solid #000000;
+  border: 2px solid #CCCCCC;
   border-radius: 3px;
   box-sizing: border-box;
+}
+
+.filters__input[type="checkbox"]:checked + .filters__control-mark {
+  border: 2px solid #000000;
 }
 
 .filters__input[type="checkbox"]:checked + .filters__control-mark::before {
   content: "";
   width: 10px;
   height: 10px;
-  background: url("../images/checkmark.svg") center / 10px 10px no-repeat;
+  background: url("../images/catalog/checkmark-filters.svg") center / 10px 10px no-repeat;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1471,6 +1494,34 @@ background-color: #FFC700;
   line-height: 20px;
 }
 
+.filters__control-mark-bt {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #CCCCCC;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.filters__input[type="radio"]:checked + .filters__control-mark-bt {
+  border: 2px solid #000000;
+}
+
+.filters__input[type="radio"]:checked + .filters__control-mark-bt::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #000000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .product-cards {
 	width: 840px;
 }
@@ -1478,7 +1529,8 @@ background-color: #FFC700;
 .sorting {
 	background-color: #F0F0F0;
 	display: flex;
-	align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
 }
 
 .sorting__title {
@@ -1489,8 +1541,7 @@ background-color: #FFC700;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	margin: 0;
-	padding: 26px 0;
-	margin-left: 40px;
+  padding: 25px 0;
 }
 
 .sorting__select {
@@ -1500,11 +1551,40 @@ background-color: #FFC700;
 	font-size: 18px;
 	line-height: 30px;
 	background-color: #F0F0F0;
-	margin-left: 206px;
+  padding: 20px 0;
+  border: none;
+  width: 141px;
+}
+
+.sorting__buttons {
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
 .sorting__button {
-	display: block;
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  background: url("../images/catalog/sorting-arrow.svg") center / 11px 10px no-repeat;
+  opacity: 0.2;
+}
+
+.sorting__button:hover {
+  opacity: 0.5;
+}
+
+.sorting__button:active {
+  opacity: 1;
+}
+
+.sorting__button:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.sorting__button--down {
+  transform: rotate(180deg);
 }
 
 .product-cards {
@@ -1671,4 +1751,16 @@ background-color: #FFC700;
 
 .pagination__link-numbers--first{
 	opacity: 0.6;
+}
+
+/* Модальное окно */
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(240, 240, 240, 0.9);
+  z-index: 1;
 }

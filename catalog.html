@@ -149,11 +149,17 @@
               <ul class="filters__list">
                 <li class="filters__item">
                   <label class="filters__label" for="bt-yes">
-                    <input class="filters__input" type="radio" id="bt-yes" name="bluetooth" value="yes" checked> Есть </label>
+                    <input class="filters__input visually-hidden" type="radio" id="bt-yes" name="bluetooth" value="yes" checked>
+                    <span class="filters__control-mark-bt"></span>
+                    <span class="filters__control-label-bt">Есть</span>
+                  </label>
                 </li>
                 <li class="filters__item">
                   <label class="filters__label" for="bt-no">
-                    <input class="filters__input" type="radio" id="bt-no" name="bluetooth" value="no"> Нет </label>
+                    <input class="filters__input visually-hidden" type="radio" id="bt-no" name="bluetooth" value="no">
+                    <span class="filters__control-mark-bt"></span>
+                    <span class="filters__control-label-bt">Нет</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -167,12 +173,14 @@
                 <option value="visually-hidden">Сначала дорогие</option>
                 <option value="visually-hidden">Сначала дешевые</option>
               </select>
-              <a href="#" class="sorting__button sorting__button--up">
-                <span class="visually-hidden">Сортировка по возрастанию</span>
-              </a>
-              <a href="#" class="sorting__button sorting__button--down">
-                <span class="visually-hidden">Сортировка по убыванию</span>
-              </a>
+              <div class="sorting__buttons">
+                <a href="#" class="sorting__button sorting__button--up">
+                  <span class="visually-hidden">Сортировка по возрастанию</span>
+                </a>
+                <a href="#" class="sorting__button sorting__button--down">
+                  <span class="visually-hidden">Сортировка по убыванию</span>
+                </a>
+              </div>
             </div>
             <ul class="product-cards__list">
               <li class="product-cards__item">
