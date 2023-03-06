@@ -15,8 +15,10 @@
       </a>
       <div class="users-menu">
         <form class="page-header__search-form" action="https://echo.htmlacademy.ru" method="get">
-          <label for="search" class="visually-hidden">Поиск по сайту</label>
-          <input class="page-header__input" id="search" name="search" type="text" placeholder="Поиск по сайту">
+          <label for="search" class="page-header__label">
+            <span class="visually-hidden">Поиск по сайту</span>
+            <input class="page-header__input" id="search" name="search" type="text" placeholder="Поиск по сайту">
+          </label>
           <button class="page-header__button" type="submit">Найти</button>
         </form>
         <ul class="page-header__list">
@@ -319,7 +321,27 @@
         </section>
       </div>
     </footer>
-    <div class="modal-container"></div>
+    <div class="modal-container">
+      <div class="modal modal__delivery">
+        <button class="modal__close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal__content">
+          <h2 class="modal__title">Доставка под заказ</h2>
+          <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
+            <label for="modal-name" class="modal__label">Ваше имя:</label>
+            <input class="modal__input" type="text" id="name" placeholder="Введите имя">
+            <label for="modal-name" class="modal__label">Ваш e-mail:</label>
+            <input class="modal__input" type="" id="name" placeholder="Введите имя">
+            <label for="modal-name" class="modal__label">Что нужно привезти:</label>
+            <input class="modal__input" type="text" id="name" placeholder="В свободной форме">
+            <label for="modal-name" class="modal__label">Количество:</label>
+            <input class="modal__input" type="number" id="name" value="0">
+            <button class="modal__button-link button-link button-link--stripe" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 
 </html>
