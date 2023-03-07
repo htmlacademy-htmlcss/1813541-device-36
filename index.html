@@ -329,14 +329,36 @@
         <section class="modal__content">
           <h2 class="modal__title">Доставка под заказ</h2>
           <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
-            <label for="modal-name" class="modal__label">Ваше имя:</label>
-            <input class="modal__input" type="text" id="name" placeholder="Введите имя">
-            <label for="modal-name" class="modal__label">Ваш e-mail:</label>
-            <input class="modal__input" type="" id="name" placeholder="Введите имя">
-            <label for="modal-name" class="modal__label">Что нужно привезти:</label>
-            <input class="modal__input" type="text" id="name" placeholder="В свободной форме">
-            <label for="modal-name" class="modal__label">Количество:</label>
-            <input class="modal__input" type="number" id="name" value="0">
+            <p class="modal__group modal__group--name">
+              <label class="modal__label" for="modal-name">Ваше имя:</label>
+              <input class="modal__input modal__input--name" type="text" id="modal-name" placeholder="Введите имя">
+            </p>
+            <p class="modal__group modal__group--mail">
+              <label class="modal__label" for="modal-mail">Ваш e-mail:</label>
+              <input class="modal__input modal__input--mail" type="email" id="modal-mail" placeholder="почта">
+            </p>
+            <p class="modal__group modal__group--description">
+              <label class="modal__label" for="modal-info">Что нужно привезти:</label>
+              <input class="modal__input" type="text" id="modal-info" placeholder="В свободной форме">
+            </p>
+            <p class="modal__group modal__group--quantity">
+              <span class="modal__label modal__label--quantity">
+                <label class="modal__label" for="modal-quantity">Количество: </label>
+                <span class="modal__tooltip tooltip">
+                  <button class="tooltip__toggle" type="button">
+                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                  </button>
+                  <span class="tooltip__text">Постараемся найти, сколько нужно. Привезём&nbsp;сколько получится по требованиям к&nbsp;провозу&nbsp;багажа.</span>
+                </span>
+              </span>
+              <button class="modal__button-quantity">
+                <span class="visually-hidden">Уменьшить</span>
+              </button>
+              <input class="modal__input modal__input--quantity" type="number" id="modal-quantity" value="1">
+              <button class="modal__button-quantity">
+                <span class="visually-hidden">Увеличить</span>
+              </button>
+            </p>
             <button class="modal__button-link button-link button-link--stripe" type="submit">Отправить</button>
           </form>
         </section>
