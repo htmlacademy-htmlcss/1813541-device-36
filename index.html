@@ -40,6 +40,38 @@
               <span class="visually-hidden">Добавлено товаров:</span>
               <span class="page-header__amount-text">2</span>
             </a>
+            <div class="page-header__popover popover">
+              <div class="popover__content">
+                <h2 class="visually-hidden">Корзина</h2>
+                <ul class="popover__list">
+                  <li class="popover__item">
+                    <a href="#" class="popover__link">
+                      <img src="images/catalog/amateurselfie-stick.jpg" alt="Любительская селфи-палка" class="product-cards__image" width="39" height="43">
+                      <h3 class="popover__sub-title">Любительская селфи-палка</h3>
+                    </a>
+                    <button class="popover__button-del">
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
+                  </li>
+                  <li class="popover__item">
+                    <a href="#" class="popover__link">
+                      <img src="images/catalog/professional-selfie-stick.jpg" alt="Любительская селфи-палка" class="product-cards__image" width="39" height="43">
+                      <h3 class="popover__sub-title">Профессиональная селфи-палка</h3>
+                    </a>
+                    <button class="popover__button-del">
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
+                  </li>
+                </ul>
+                <div class="popover__info">
+                  <p class="popover__text">Товаров: 2</p>
+                  <p class="popover__text">Сумма: 2000 ₽</p>
+                </div>
+                <a href="#" class="popover__link-open">
+                  <span class="popover__text-open">Открыть&nbsp;корзину</span>
+                </a>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -47,6 +79,38 @@
         <ul class="navigation__list">
           <li class="navigation__item">
             <a href="catalog.html" class="navigation__link navigation__link--plus">Каталог товаров</a>
+            <ul class="navigation__sub-menu sub-menu">
+              <li class="sub-menu__item">
+                <ul class="sub-menu__content-list">
+                  <li class="sub-menu__content-item">
+                    <a href="#" class="sub-menu__link">Виртуальная реальность</a>
+                  </li>
+                  <li class="sub-menu__content-item">
+                    <a href="#" class="sub-menu__link">Моноподы для селфи</a>
+                  </li>
+                  <li class="sub-menu__content-item">
+                    <a href="#" class="sub-menu__link">Экшн-камеры</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sub-menu__item">
+                <ul class="sub-menu__content-list">
+                  <li class="sub-menu__content-item">
+                    <a href="#" class="sub-menu__link">Фитнес-браслеты</a>
+                  </li>
+                  <li class="sub-menu__content-item">
+                    <a href="#" class="sub-menu__link">Умные часы</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sub-menu__item">
+                <ul class="sub-menu__content-list">
+                  <li class="sub-menu__content-item">
+                    <a href="#" class="sub-menu__link">Квадрокоптеры</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </li>
           <li class="navigation__item">
             <a href="#" class="navigation__link">Доставка</a>
@@ -321,7 +385,7 @@
         </section>
       </div>
     </footer>
-    <div class="modal-container">
+    <div class="modal-container modal-container--close">
       <div class="modal modal__delivery">
         <button class="modal__close-button">
           <span class="visually-hidden">Закрыть</span>
@@ -336,6 +400,7 @@
             <p class="modal__group modal__group--mail">
               <label class="modal__label" for="modal-mail">Ваш e-mail:</label>
               <input class="modal__input modal__input--mail" type="email" id="modal-mail" placeholder="почта">
+              <span class="modal__text-error">Забавный у вас адрес</span>
             </p>
             <p class="modal__group modal__group--description">
               <label class="modal__label" for="modal-info">Что нужно привезти:</label>
@@ -345,19 +410,21 @@
               <span class="modal__label modal__label--quantity">
                 <label class="modal__label" for="modal-quantity">Количество: </label>
                 <span class="modal__tooltip tooltip">
-                  <button class="tooltip__toggle" type="button">
+                  <button class="tooltip__toggle" type="button" aria-labelledby="tooltip-label-quantity">
                     <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                   </button>
-                  <span class="tooltip__text">Постараемся найти, сколько нужно. Привезём&nbsp;сколько получится по требованиям к&nbsp;провозу&nbsp;багажа.</span>
+                  <span class="tooltip__text" role="tooltip" id="tooltip-label-quantity">Постараемся найти, сколько нужно. Привезём&nbsp;сколько получится по требованиям к&nbsp;провозу&nbsp;багажа.</span>
                 </span>
               </span>
-              <button class="modal__button-quantity">
-                <span class="visually-hidden">Уменьшить</span>
-              </button>
-              <input class="modal__input modal__input--quantity" type="number" id="modal-quantity" value="1">
-              <button class="modal__button-quantity">
-                <span class="visually-hidden">Увеличить</span>
-              </button>
+              <span class="modal__quantity-wrapper">
+                <button class="modal__button-quantity modal__button-quantity--minus">
+                  <span class="visually-hidden">Уменьшить</span>
+                </button>
+                <input class="modal__input modal__input--quantity" type="number" id="modal-quantity" value="1">
+                <button class="modal__button-quantity modal__button-quantity--plus">
+                  <span class="visually-hidden">Увеличить</span>
+                </button>
+              </span>
             </p>
             <button class="modal__button-link button-link button-link--stripe" type="submit">Отправить</button>
           </form>

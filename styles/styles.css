@@ -213,6 +213,7 @@ body {
 
 .page-header__item {
 	margin: 0;
+  position: relative;
 }
 
 .page-header__item:not(:last-child) {
@@ -305,6 +306,10 @@ body {
 	padding: 0;
 }
 
+.navigation__item {
+  position: relative;
+}
+
 .navigation__item:not(:last-child) {
 	margin-right: 45px;
 }
@@ -363,6 +368,50 @@ body {
 
 .navigation__link--plus:active::after {
 	opacity: 1;
+}
+
+/* Подменю Каталог товаров */
+
+.sub-menu {
+  list-style: none;
+  padding: 33px 60px 27px 60px;
+  background-color: #FFE17F;
+  display: flex;
+  position: absolute;
+  width: 1160px;
+  top: 35px;
+  left: -60px;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.navigation__sub-menu {
+  display: none;
+}
+
+.sub-menu__item {
+  min-width: 211px;
+}
+
+.sub-menu__content-list {
+  list-style: none;
+  padding: 0 0 40px 0;
+}
+
+.sub-menu__content-item:not(:last-child) {
+  margin-bottom: 19px;
+}
+
+.sub-menu__link {
+  text-decoration: none;
+  text-transform: initial;
+  letter-spacing: initial;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
 }
 
 /* main*/
@@ -1921,6 +1970,10 @@ background-color: #FFC700;
   padding: 20px 40px 20px 20px;
 }
 
+.modal__input:focus-visible {
+  outline: none;
+}
+
 .modal__input--name {
   background: url("../images/modal-window/modal-name.svg") center right 21px no-repeat #F0F0F0;
 }
@@ -1928,6 +1981,27 @@ background-color: #FFC700;
 .modal__input--mail {
   background: url("../images/modal-window/modal-mail.svg") center right 20px no-repeat #F0F0F0;
 }
+
+.modal__text-error {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FF3D3D;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal__input--mail:invalid:not(:placeholder-shown) {
+  outline: 2px solid #FF3D3D;
+}
+
+.modal__input--mail:invalid:not(:placeholder-shown) + .modal__text-error {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 .modal__input::placeholder {
   color: rgba(0, 0, 0, 0.3);
@@ -1993,52 +2067,162 @@ background-color: #FFC700;
   display: block;
 }
 
-/*
-
-
-.modal__text--info {
-  padding-right: 34px;
+.modal__quantity-wrapper {
+  display: flex;
 }
 
-.modal__button-info {
-  width: 26px;
-  height: 26px;
-  background: url("../images/modal-window/modal-i.svg") center no-repeat #FFE17F;
+.modal__button-quantity {
   border: none;
-  border-radius: 50%;
+  margin: 0;
+  padding: 0;
 }
 
-
-
-.modal__input::placeholder {
-  color: rgba(0, 0, 0, 0.3);
+.modal__button-quantity::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background: var(--modal-quantity) center no-repeat #F0F0F0;
+  display: block;
+  cursor: pointer;
 }
 
-.modal__input--name {
-  width: 360px;
-  padding: 20px 40px 20px 20px;
+.modal__button-quantity--minus {
+  --modal-quantity: url("../images/modal-window/modal-minus.svg");
 }
 
-.modal__input--mail {
-  width: 360px;
-  padding: 20px 40px 20px 20px;
-}
-
-.modal__input--text {
-  width: 540px;
-  padding: 20px 40px 20px 20px;
+.modal__button-quantity--plus {
+  --modal-quantity: url("../images/modal-window/modal-plus.svg");
 }
 
 .modal__input--quantity {
   width: 60px;
-  padding: 20px 0;
+  padding: 0;
   text-align: center;
 }
-*/
+
+.modal__input--quantity::-webkit-inner-spin-button,
+.modal__input--quantity::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
 
 .modal__button-link {
   width: 200px;
   border: none;
   background-color: #FFFFFF;
   cursor: pointer;
+}
+
+
+/* Поповер */
+
+.popover {
+  width: 320px;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  background: #000000;
+  position: absolute;
+  top: 30px;
+  left: -143px;
+  z-index: 5;
+  box-sizing: border-box;
+  display: none;
+}
+
+.popover--open {
+  display: block;
+}
+
+.popover::before {
+  content: "";
+  width: 14px;
+  height: 6px;
+  background: url("../images/modal-window/tooltip-arrow.svg") center no-repeat;
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.popover__content {
+  height: 100%;
+}
+
+.popover__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.popover__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.popover__item + .popover__item {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.popover__link {
+  display: flex;
+}
+
+.popover__sub-title {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  width: 155px;
+  margin: 0 0 0 23px;
+  padding: 0;
+}
+
+.popover__button-del {
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 10px;
+  height: 10px;
+  background: url("../images/popap-delete.svg") center no-repeat;
+  cursor: pointer;
+}
+
+.popover__info {
+  margin: 0;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1A1A1A;
+}
+
+.popover__text {
+  margin: 0;
+}
+
+.popover__link-open {
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+}
+
+.popover__text-open {
+  font-family: var(--additional-font);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  display: block;
+  padding: 14px 25px;
+  background-color: #FFFFFF;
 }
