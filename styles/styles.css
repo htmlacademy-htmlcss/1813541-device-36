@@ -318,6 +318,15 @@ body {
 	margin-right: auto;
 }
 
+.navigation__item:focus-within .navigation__sub-menu {
+  display: flex;
+}
+
+.navigation__item:focus-within .navigation__link--plus::after {
+  z-index: 2;
+  background-image: url("../images/modal-window/modal-minus.svg");
+}
+
 .navigation__link {
 	text-decoration: none;
 	color: #000000;
@@ -393,6 +402,10 @@ body {
   min-width: 211px;
 }
 
+.sub-menu__item:first-child {
+  margin-right: 30px;
+}
+
 .sub-menu__content-list {
   list-style: none;
   padding: 0 0 40px 0;
@@ -412,6 +425,19 @@ body {
   font-size: 16px;
   line-height: 18px;
   color: #000000;
+}
+
+.sub-menu__link:hover {
+  opacity: 0.6;
+}
+
+.sub-menu__link:active {
+  opacity: 0.3;
+}
+
+.sub-menu__link:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 /* main*/
