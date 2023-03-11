@@ -400,7 +400,7 @@ body {
 
 .sub-menu {
   list-style: none;
-  padding: 13px 60px 27px 60px;
+  padding: 3px 60px 27px 60px;
   background-color: #FFE17F;
   display: flex;
   position: absolute;
@@ -420,16 +420,16 @@ body {
 }
 
 .sub-menu__item:first-child {
-  margin-right: 30px;
+  margin-right: 42px;
 }
 
 .sub-menu__content-list {
   list-style: none;
-  padding: 0 0 40px 0;
+  padding: 0 0 30px 0;
 }
 
 .sub-menu__content-item:not(:last-child) {
-  margin-bottom: 19px;
+  margin-bottom: 15px;
 }
 
 .sub-menu__link {
@@ -516,6 +516,7 @@ body {
 	list-style: none;
 	padding: 0;
 	margin: 0 0 17px 0;
+  counter-reset: slide;
 }
 
 .page-main__slider {
@@ -524,6 +525,19 @@ body {
 
 .slider__item {
 	display: none;
+  position: relative;
+}
+
+.slider__item::before {
+  font-weight: 700;
+  font-size: 180px;
+  line-height: 30px;
+  color: #FFFFFF;
+  counter-increment: slide;
+  content: "0" counter(slide);
+  position: absolute;
+  top: 47px;
+  right: 49px;
 }
 
 .slider__item--active {
@@ -537,6 +551,7 @@ body {
 
 .text-description {
 	padding-top: 86px;
+  z-index: 1;
 }
 
 .slider__text {
@@ -1938,7 +1953,7 @@ background-color: #FFC700;
 	text-transform: uppercase;
 	color: #444444;
 	display: block;
-	padding: 25px;
+	padding: 25px 23px;
 }
 
 .pagination__link--back {
@@ -2022,7 +2037,7 @@ background-color: #FFC700;
 .modal {
   position: relative;
   margin: auto;
-  padding: 72px 80px;
+  padding: 62px 70px;
   background-color: #FFFFFF;
 }
 
@@ -2036,8 +2051,8 @@ background-color: #FFC700;
 .modal__close-button {
   position: absolute;
   padding: 0;
-  top: 84px;
-  right: 80px;
+  top: 74px;
+  right: 70px;
   width: 26px;
   height: 26px;
   background: url("../images/modal-window/modal-close.svg") center no-repeat #FFFFFF;
@@ -2324,8 +2339,8 @@ background-color: #FFC700;
   color: #FFFFFF;
   background: #000000;
   position: absolute;
-  top: 30px;
-  left: -127px;
+  top: 37px;
+  left: -126px;
   z-index: 5;
   box-sizing: border-box;
   display: none;
