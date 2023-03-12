@@ -4,6 +4,8 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 
@@ -17,7 +19,7 @@
         <form class="page-header__search-form" action="https://echo.htmlacademy.ru" method="get">
           <label for="search" class="page-header__label">
             <span class="visually-hidden">Поиск по сайту</span>
-            <input class="page-header__input" id="search" name="search" type="text" placeholder="Текст поиска">
+            <input class="page-header__input" id="search" name="search" type="text" placeholder="Текст поиска" required>
           </label>
           <button class="page-header__button" type="submit">Найти</button>
         </form>
@@ -213,14 +215,14 @@
             <fieldset class="filters__group">
               <legend class="filters__sub-title">Bluetooth</legend>
               <ul class="filters__list">
-                <li class="filters__item">
+                <li class="filters__item filters__item--bt">
                   <label class="filters__label" for="bt-yes">
                     <input class="filters__input visually-hidden" type="radio" id="bt-yes" name="bluetooth" value="yes" checked>
                     <span class="filters__control-mark-bt"></span>
                     <span class="filters__control-label-bt">Есть</span>
                   </label>
                 </li>
-                <li class="filters__item">
+                <li class="filters__item filters__item--bt">
                   <label class="filters__label" for="bt-no">
                     <input class="filters__input visually-hidden" type="radio" id="bt-no" name="bluetooth" value="no">
                     <span class="filters__control-mark-bt"></span>

@@ -4,6 +4,8 @@
   <head>
     <meta charset="utf-8">
     <title>Девайс</title>
+    <link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 
@@ -17,7 +19,7 @@
         <form class="page-header__search-form" action="https://echo.htmlacademy.ru" method="get">
           <label for="search" class="page-header__label">
             <span class="visually-hidden">Поиск по сайту</span>
-            <input class="page-header__input" id="search" name="search" type="text" placeholder="Поиск по сайту">
+            <input class="page-header__input" id="search" name="search" type="text" placeholder="Поиск по сайту" required>
           </label>
           <button class="page-header__button" type="submit">Найти</button>
         </form>
@@ -40,6 +42,7 @@
               <span class="visually-hidden">Добавлено товаров:</span>
               <span class="page-header__amount-text">2</span>
             </a>
+            <!-- TODO чтобы открылась корзина необходимо добавить класс popover--open -->
             <div class="page-header__popover popover">
               <div class="popover__content">
                 <h2 class="visually-hidden">Корзина</h2>
@@ -78,7 +81,7 @@
       <nav class="page-header__navigation navigation">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="catalog.html" class="navigation__link navigation__link--plus">Каталог товаров</a>
+            <a href="#" class="navigation__link navigation__link--plus">Каталог товаров</a>
             <ul class="navigation__sub-menu sub-menu">
               <li class="sub-menu__item">
                 <ul class="sub-menu__content-list">
@@ -385,9 +388,10 @@
         </section>
       </div>
     </footer>
+    <!-- TODO Чтобы открыть модальное окно необходимо убрать класс modal-container--close -->
     <div class="modal-container modal-container--close">
       <div class="modal modal__delivery">
-        <button class="modal__close-button">
+        <button class="modal__close-button" type="button">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <section class="modal__content">
@@ -395,16 +399,16 @@
           <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
             <p class="modal__group modal__group--name">
               <label class="modal__label" for="modal-name">Ваше имя:</label>
-              <input class="modal__input modal__input--name" type="text" id="modal-name" placeholder="Введите имя">
+              <input class="modal__input modal__input--name" type="text" id="modal-name" placeholder="Введите имя" required>
             </p>
             <p class="modal__group modal__group--mail">
               <label class="modal__label" for="modal-mail">Ваш e-mail:</label>
-              <input class="modal__input modal__input--mail" type="email" id="modal-mail" placeholder="почта">
+              <input class="modal__input modal__input--mail" type="email" id="modal-mail" placeholder="почта" required>
               <span class="modal__text-error">Забавный у вас адрес</span>
             </p>
             <p class="modal__group modal__group--description">
               <label class="modal__label" for="modal-info">Что нужно привезти:</label>
-              <input class="modal__input modal__input--description" type="text" id="modal-info" placeholder="В свободной форме">
+              <input class="modal__input modal__input--description" type="text" id="modal-info" placeholder="В свободной форме" required>
             </p>
             <p class="modal__group modal__group--quantity">
               <span class="modal__label modal__label--quantity">
@@ -417,11 +421,11 @@
                 </span>
               </span>
               <span class="modal__quantity-wrapper">
-                <button class="modal__button-quantity modal__button-quantity--minus">
+                <button class="modal__button-quantity modal__button-quantity--minus" type="button">
                   <span class="visually-hidden">Уменьшить</span>
                 </button>
                 <input class="modal__input modal__input--quantity" type="number" id="modal-quantity" value="1">
-                <button class="modal__button-quantity modal__button-quantity--plus">
+                <button class="modal__button-quantity modal__button-quantity--plus" type="button">
                   <span class="visually-hidden">Увеличить</span>
                 </button>
               </span>
