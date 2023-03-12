@@ -155,13 +155,14 @@ body {
 	font-family: inherit;
 	font-size: 16px;
 	line-height: 20px;
-	width: 307px;
+	width: 357px;
 	border: 2px solid #000000;
 	border-right: none;
 	border-radius: 40px 0 0 40px;
 	background-color: #FFE17F;
 	padding: 8px 8px 8px 48px;
   background: url("../images/magnifier.svg") left 14px center no-repeat;
+  box-sizing: border-box;
 }
 
 .page-header__input:focus-visible {
