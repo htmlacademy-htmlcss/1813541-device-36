@@ -325,6 +325,7 @@ body {
 	list-style: none;
 	display: flex;
 	align-items: center;
+  flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
 }
@@ -747,7 +748,7 @@ body {
 .services__info {
 	display: flex;
 	gap: 116px;
-	align-items: center;
+	/* align-items: center; */
 }
 
 .services__list {
@@ -782,7 +783,7 @@ body {
 .services__list-description {
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding: 73px 0;
   position: relative;
 }
 
@@ -799,9 +800,8 @@ body {
   background: var(--services-pic) center / var(--pic-size) no-repeat;
   display: inline-block;
   position: absolute;
-  top: 50%;
+  top: -14px;
   left: calc(100% + var(--left-size));
-  transform: translateY(-50%);
 }
 
 .services__item-description--delivery {
