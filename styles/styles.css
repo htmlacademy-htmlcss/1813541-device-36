@@ -282,8 +282,13 @@ body {
 }
 
 .page-header__link--exit {
-	margin-right: 26px;
-	opacity: 0.3;
+	margin-right: 22px;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.page-header__link--exit::before {
+  display: none;
 }
 
 .page-header__text {
@@ -1846,6 +1851,26 @@ background-color: #FFC700;
 
 .product-cards__link:hover .product-cards__button-link {
   display: block;
+}
+
+.product-cards__link:hover .product-cards__image {
+  opacity: 0.6;
+}
+
+.product-cards__link:hover .product-cards__sign {
+  opacity: 0.6;
+}
+
+.product-cards__link:active .button-link--stripe::before {
+  background-color: #FFC700;
+}
+
+.product-cards__link:active .product-cards__image {
+  opacity: 0.3;
+}
+
+.product-cards__link:active .product-cards__sign {
+  opacity: 0.3;
 }
 
 .product-cards__link:focus-visible {
