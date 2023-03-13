@@ -41,11 +41,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
-
-
-	/* outline: 5px solid rgba(255, 99, 78, 0.5);
-	outline-offset: -5px; */
-
 }
 
 .visually-hidden {
@@ -279,6 +274,7 @@ body {
 	--users-icon: url("../images/basket.svg");
 	position: relative;
   padding-left: 15px;
+  display: block;
 }
 
 .page-header__link--exit {
@@ -306,8 +302,9 @@ body {
 	width: 21px;
 	height: 21px;
 	position: absolute;
-	top: 0;
+	top: 50%;
 	left: 0;
+  transform: translateY(-50%);
 }
 
 /* Навигация */
@@ -320,21 +317,25 @@ body {
 }
 
 .navigation__list {
-	text-transform: uppercase;
-	letter-spacing: 0.2em;
-	list-style: none;
-	display: flex;
-	align-items: center;
-	margin: 0;
-	padding: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 524px min-content min-content min-content;
+  gap: 0 45px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .navigation__item {
   position: relative;
 }
 
-.navigation__item:not(:last-child) {
-	margin-right: 44px;
+.navigation__item:nth-child(3n+5) {
+  grid-column: 2 / 3;
+  margin: 15px 0;
 }
 
 .navigation__item:first-child {
@@ -747,7 +748,7 @@ body {
 .services__info {
 	display: flex;
 	gap: 116px;
-	align-items: center;
+	/* align-items: center; */
 }
 
 .services__list {
@@ -782,7 +783,7 @@ body {
 .services__list-description {
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding: 73px 0;
   position: relative;
 }
 
@@ -799,9 +800,8 @@ body {
   background: var(--services-pic) center / var(--pic-size) no-repeat;
   display: inline-block;
   position: absolute;
-  top: 50%;
+  top: -14px;
   left: calc(100% + var(--left-size));
-  transform: translateY(-50%);
 }
 
 .services__item-description--delivery {
@@ -1121,6 +1121,7 @@ background-color: #FFC700;
 	line-height: 21px;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
+  background-color: transparent;
 	width: 253px;
 	padding: 15px 38px;
 	border: 3px solid #C4C4C4;
@@ -2048,7 +2049,7 @@ background-color: #FFC700;
 }
 
 .pagination__link-numbers--first{
-	opacity: 0.6;
+  color: rgba(68, 68, 68, 0.6);
 }
 
 /* Модальное окно */
